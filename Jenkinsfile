@@ -47,11 +47,6 @@ pipeline {
                 sh 'kubectl apply -f k8s/ing.yaml'
             }
         }
-        // stage('components') {
-        //     steps {
-        //         sh 'kubectl apply -f k8s/components.yaml'
-        //     }
-        // }
         stage('Ingress endpoint') {
             steps {
                 sh 'kubectl get ingress -n dev-ns'
