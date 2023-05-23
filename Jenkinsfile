@@ -24,27 +24,27 @@ pipeline {
         }
         stage('Replace build number') {
             steps {
-                sh 'sed -i s/number/$BUILD_NUMBER/g k8s/dept.yml'
+                sh 'sed -i s/number/$BUILD_NUMBER/g k8s/dept.yaml'
             }
         }
         stage('Namespace') {
             steps {
-                sh 'kubectl apply -f k8s/namespace.yml'
+                sh 'kubectl apply -f k8s/namespace.yaml'
             }
         }
         stage('Deployment') {
             steps {
-                sh 'kubectl apply -f k8s/dept.yml'
+                sh 'kubectl apply -f k8s/dept.yaml'
             }
         }
         stage('Service') {
             steps {
-                sh 'kubectl apply -f k8s/svc.yml'
+                sh 'kubectl apply -f k8s/svc.yaml'
             }
         }
         stage('Ingress') {
             steps {
-                sh 'kubectl apply -f k8s/ing.yml'
+                sh 'kubectl apply -f k8s/ing.yaml'
             }
         }
         stage('Ingress endpoint') {
