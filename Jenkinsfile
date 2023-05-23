@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('CheckOut') {
             steps {
-                git branch: 'main', url: 'git@github.com:maheswargoud/dev.git'
+                git branch: 'main', url: 'git@github.com:maheswargoud/k8s.git'
             }
         }
         stage('DockerLogin') {
