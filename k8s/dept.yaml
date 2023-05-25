@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: dept-dev
-        image: 778168509800.dkr.ecr.ap-northeast-1.amazonaws.com/k8s:number
+        image: 778168509800.dkr.ecr.ap-northeast-1.amazonaws.com/dev:number
         resources:
           requests:
             memory: "128Mi"
@@ -29,3 +29,4 @@ spec:
             cpu: 1
         ports:
           - containerPort: 80
+
