@@ -4,6 +4,7 @@ metadata:
   name: svc-dev
   namespace: dev-ns
 spec:
+  type: LoadBalancer
   selector:
     app: dept-dev
   ports:
