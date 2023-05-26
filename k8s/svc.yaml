@@ -19,6 +19,7 @@ metadata:
   name: static-svc
   namespace: static-app-ns
 spec:
+  type: LoadBalancer
   selector:
     app: static-dept
   ports:
