@@ -57,10 +57,10 @@ pipeline {
                 sh 'kubectl get po -n ingress-nginx'
             }
         }
-        // stage('Ingress describe') {
-        //     steps {
-        //     sh 'kubectl describe po ingress-nginx-controller-6dc4c69456-7lqwf -n ingress-nginx'
-        //         }
-        // }
+        stage('Ingress describe') {
+            steps {
+            sh 'kubectl describe po aws-load-balancer-controller-7dff95fcf9-hj7n8 -n ingress-nginx'
+                }
+        }
     }
 }
