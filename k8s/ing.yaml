@@ -15,7 +15,7 @@ spec:
         path: "/"
         backend:
           service:
-            name: svc-dev
+            name: dept-dev
             port: 
               number: 80
 
