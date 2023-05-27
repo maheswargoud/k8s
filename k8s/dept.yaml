@@ -54,7 +54,7 @@ spec:
     spec:
       containers:
       - name: static-image
-        image: 778168509800.dkr.ecr.ap-northeast-1.amazonaws.com/dev:number
+        image: 778168509800.dkr.ecr.ap-northeast-1.amazonaws.com/prod:number
         resources:
           requests:
             memory: "128Mi"
