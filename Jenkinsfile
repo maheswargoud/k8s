@@ -14,12 +14,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'sudo docker build -t 778168509800.dkr.ecr.ap-northeast-1.amazonaws.com/dev:$BUILD_NUMBER .'
+                sh 'sudo docker build -t 778168509800.dkr.ecr.ap-northeast-1.amazonaws.com/prod:$BUILD_NUMBER .'
             }
         }
         stage('Push') {
             steps {
-                sh 'sudo docker push 778168509800.dkr.ecr.ap-northeast-1.amazonaws.com/dev:$BUILD_NUMBER'
+                sh 'sudo docker push 778168509800.dkr.ecr.ap-northeast-1.amazonaws.com/prod:$BUILD_NUMBER'
             }
         }
         stage('Replace build number') {
@@ -49,7 +49,7 @@ pipeline {
         }
         stage('Ingress endpoint') {
             steps {
-                sh 'kubectl get ingress -n dev-ns'
+                sh 'kubectl get ingress -n prod-ns'
             }
         }
         stage('Ingress pod') {

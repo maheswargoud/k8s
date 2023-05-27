@@ -25,13 +25,13 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: static-ing
-  namespace: static-app-ns
+  namespace: prod-ns
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
 spec:
   rules:
-  - host: static.maheswargoud.xyz
+  - host: prod.maheswargoud.xyz
     http:
       paths:
       - pathType: Prefix

@@ -37,7 +37,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: static-deployment
-  namespace: static-app-ns
+  namespace: prod-ns
 spec:
   selector:
     matchLabels:

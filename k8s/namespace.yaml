@@ -1,12 +1,4 @@
-# apiVersion: v1
-# kind: Namespace
-# metadata:
-#   name: dev-ns
-
-
-
-
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: static-app-ns
+  name: prod-ns
