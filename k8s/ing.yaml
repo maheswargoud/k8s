@@ -1,26 +1,3 @@
-# apiVersion: networking.k8s.io/v1
-# kind: Ingress
-# metadata:
-#   name: ingress-dev
-#   namespace: dev-ns
-#   annotations:
-#     kubernetes.io/ingress.class: alb
-#     alb.ingress.kubernetes.io/scheme: internet-facing
-# spec:
-#   rules:
-#   - host: prod.maheswargoud.xyz
-#     http:
-#       paths:
-#       - pathType: Prefix
-#         path: "/"
-#         backend:
-#           service:
-#             name: dept-dev
-#             port: 
-#               number: 80
-
-              
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
